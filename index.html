@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Deck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="container">
+            <div class="top-deck">
+                <div class="card unactive" style="--i: -1">
+                    <img src="./Images/Ronaldo.png" alt="">
+                    <div class="content">
+                        <div class="name">Ronaldo</div>
+                        <div class="desc">
+                            Cristiano Ronaldo is an exceptional football player, known for his incredible athleticism, skill, and ability to score crucial goals.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card unactive" style="--i: 0">
+                    <img src="./Images/Messi_Ronaldo2.png" alt="">
+                    <div class="content">
+                        <div class="name">GOATs</div>
+                        <div class="desc">
+                            Messi and Cristiano are both exceptional football players whose skill, dedication, and work ethic has earned them a place in football history as two of the greatest players of all time.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card unactive" style="--i: 1">
+                    <img src="./Images/Messi.png" alt="">
+                    <div class="content">
+                        <div class="name">Messi</div>
+                        <div class="desc">
+                            Lionel Messi is widely regarded as one of the greatest footballers of all time, known for his exceptional skill, speed, and precision on the field. 
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-deck">
+                <div class="top-side"></div>
+                <div class="thickness"></div>
+                <div class="shadow"></div>
+            </div>
+        </div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach((card) => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('active');
+                card.classList.toggle('unactive');
+            });
+        });
+    </script>    
+</body>
+</html>
